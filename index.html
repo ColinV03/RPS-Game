@@ -10,18 +10,27 @@
     <body>
         <script>
         
+        let userScore = 0;
+        let compScore = 0; 
+
         playerSelection = window.prompt("Rock, Paper, or Scissors?")
         
-        function computerPlay('') {
-            choices = ["Rock", "Paper", "Scissors"]
-            computerSelection = choices.random();
-            return computerSelection
+        function computerPlay() {
+            choices = ["rock", "paper", "scissors"];
+            computerSelection = choices[Math.floor(Math.random() * choices.length)];
+            return computerSelection;
             console.log(computerSelection)
 
         }
 
         function playRound(playerSelection, computerSelection) {
-            
+            if ((playerSelection == "rock" && computerSelection == "scissors") || (playerSelection == "scissors" && computerSelection == "paper") || (playerSelection == "paper" && computerSelection == "rock")) {
+                userScore++ ;
+                return "You win this time!"
+            } else if ((playerSelection == "scissors" && computerSelection == "rock") || (playerSelection == "paper" && computerSelection == "scissors") || (playerSelection == "rock" && computerSelection == "paper")) {
+                compScore++ ;
+                return "You Lose" + computerSelection + " beats " + playerSelection
+            }
 
 
 
