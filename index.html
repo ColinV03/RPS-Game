@@ -8,38 +8,58 @@
         <link rel="stylesheet" href="">
     </head>
     <body>
-        <script>
+
+
+            <div class="buttons">
+                    <button onclick="">Rock</button>
+                    <button onclick="">Paper</button>
+                    <button onclick="">Scissors</button>
         
-        let userScore = 0;
-        let compScore = 0; 
-
-        playerSelection = window.prompt("Rock, Paper, or Scissors?")
         
-        function computerPlay() {
-            choices = ["rock", "paper", "scissors"];
-            computerSelection = choices[Math.floor(Math.random() * choices.length)];
-            return computerSelection;
-            console.log(computerSelection)
-
-        }
-
-        function playRound(playerSelection, computerSelection) {
-            if ((playerSelection == "rock" && computerSelection == "scissors") || (playerSelection == "scissors" && computerSelection == "paper") || (playerSelection == "paper" && computerSelection == "rock")) {
-                userScore++ ;
-                return "You win this time!"
-            } else if ((playerSelection == "scissors" && computerSelection == "rock") || (playerSelection == "paper" && computerSelection == "scissors") || (playerSelection == "rock" && computerSelection == "paper")) {
-                compScore++ ;
-                return "You Lose" + computerSelection + " beats " + playerSelection
-            }
-
-
-
-            //return 'You Lose! Paper beats Rock'
-        }
+                </div>
         
-        function game() {
-            //best of 5, report winner// 
-        }
+        
+        
+                <p id="userSel" ></p>
+                <p id="compSel"></p>
+                <p id="userScore"></p>
+                <p id="compScore"></p>
+                <p id="gamestatus"></p>
+        
+        
+        <script src="script.js">
+        // old code, see referenced script.js
+
+        //let userScore = 0;
+        //let compScore = 0; 
+//
+        //playerSelection = window.prompt("Rock, Paper, or Scissors?")
+        //
+        //function computerPlay() {
+        //    choices = ["rock", "paper", "scissors"];
+        //    computerSelection = choices[Math.floor(Math.random() * choices.length)];
+        //    return computerSelection;
+        //    console.log(computerSelection)
+//
+        //}
+//
+        //function playRound(playerSelection, computerSelection) {
+        //    if ((playerSelection == "rock" && computerSelection == "scissors") || (playerSelection == "scissors" && computerSelection == "paper") || (playerSelection == "paper" && computerSelection == "rock")) {
+        //        userScore++ ;
+        //        return "You win this time!"
+        //    } else if ((playerSelection == "scissors" && computerSelection == "rock") || (playerSelection == "paper" && computerSelection == "scissors") || (playerSelection == "rock" && computerSelection == "paper")) {
+        //        compScore++ ;
+        //        return "You Lose" + computerSelection + " beats " + playerSelection
+        //    }
+//
+//
+//
+        //    //return 'You Lose! Paper beats Rock'
+        //}
+        //
+        //function game() {
+        //    //best of 5, report winner// 
+        //}
         
         </script>
     </body>
