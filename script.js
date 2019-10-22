@@ -27,8 +27,8 @@ function game() {
         playRound(playerSelection, computerSelection);
         //ln16 notes, computer plays two successive games and functions, stops too early. 
         totals();
-        console.log(playerSelection)
-        console.log(computerSelection) 
+        console.log("You picked " + playerSelection)
+        console.log("The Computer picked " +computerSelection) 
         return games++;
 	}
 }
